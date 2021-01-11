@@ -1,0 +1,40 @@
+// -----------------------------------------------------------------------------
+// File Name : inout_D.sdf
+// Author    : Andrzej Wojciechowski (AAWO)
+// -----------------------------------------------------------------------------
+(DELAYFILE
+   // HEADER SECTION
+   (SDFVERSION "3.0")
+   (DESIGN "BIGCHIP")
+   (DATE "March 12, 1995 09:46")
+   (VENDOR "Southwestern ASIC")
+   (PROGRAM "Fast program")
+   (VERSION "1.2a")
+   (DIVIDER .)
+   (VOLTAGE 5.5:5.0:4.5)
+   (PROCESS "best:nom:worst")
+   (TEMPERATURE -40:25:125)
+   (TIMESCALE 1 ps)
+
+   // CELL SECTION
+   /////////////////////////////////////////////////////////////////////////////
+   (CELL
+      (CELLTYPE "inoutA")
+      (INSTANCE bidir.inoutA)
+      (DELAY
+         (ABSOLUTE
+            (IOPATH a   a2b (984))
+         )
+      )
+   )
+   (CELL
+      (CELLTYPE "inoutB")
+      (INSTANCE bidir.inoutB)
+      (DELAY
+         (ABSOLUTE
+            (IOPATH b   b2a (984))
+         )
+      )
+   )
+
+)
